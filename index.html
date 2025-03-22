@@ -9,16 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            position: relative; /* For absolute positioning of the background */
-            overflow: hidden; /* Prevents scrollbars overflow */
+            position: relative;
+            overflow: hidden;
         }
         .background {
-            position: fixed; /* Keep background fixed */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Send it behind other elements */
+            z-index: -1;
             overflow: hidden;
         }
         .bg-images {
@@ -46,7 +46,7 @@
             position: sticky;
             top: 0;
             width: 100%;
-            z-index: 1; /* Keep nav above background */
+            z-index: 1; 
         }
         nav ul {
             list-style-type: none;
@@ -62,17 +62,11 @@
             color: white;
             text-decoration: none;
             padding: 14px 20px;
-            border: 2px solid transparent;
-            border-image: linear-gradient(to right, red, orange, yellow, green, blue, purple);
-            border-image-slice: 1;
-            transition: background-color 0.3s, border-color 0.3s;
+            transition: background-color 0.3s;
             cursor: pointer;
         }
         nav ul li a:hover {
             background-color: #575757;
-        }
-        nav ul li a:active {
-            background-color: cyan;
         }
         .dropdown-content {
             display: none;
@@ -82,17 +76,14 @@
             z-index: 1;
         }
         .dropdown-content a {
-            border: 2px solid transparent;
-            border-image: linear-gradient(to right, red, orange, yellow, green, blue, purple);
-            border-image-slice: 1;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
             color: white;
-            transition: border-color 0.3s;
+            transition: background-color 0.3s;
         }
         .dropdown-content a:hover {
-            border-color: white;
+            background-color: #575757;
         }
         nav ul li:hover .dropdown-content {
             display: block;
@@ -102,6 +93,49 @@
             height: auto;
         }
 
+        .content {
+            margin-top: 60px; 
+            padding: 20px;
+        }
+
+        .card-group {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: flex-start; 
+        }
+
+        .card {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            overflow: hidden;  
+            width: calc(20% - 30px); /* 5 columns */
+            box-sizing: border-box; 
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .card-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -129,46 +163,134 @@
         </li>
         <li>
             <a href="#abstract">Abstract</a>
-            <div class="dropdown-content">
-                <a href="#abstract-summary">Summary</a>
-                <a href="#abstract-details">Details</a>
-            </div>
         </li>
         <li>
             <a href="#introduction">Introduction</a>
-            <div class="dropdown-content">
-                <a href="#background">Background of the Study</a>
-                <a href="#objective">Objective of the Study</a>
-                <a href="#statement">Statement of the Problem</a>
-                <a href="#significance">Significance of the Study</a>
-                <a href="#scope">Scope and Limitations</a>
-                <a href="#definition">Definition of Terms</a>
-            </div>
         </li>
         <li>
             <a href="#methodology">Methodology</a>
-            <div class="dropdown-content">
-                <a href="#research-design">Research Design</a>
-                <a href="#data-gathering">Data Gathering</a>
-                <a href="#statistical-treatment">Statistical Treatment</a>
-            </div>
         </li>
         <li>
             <a href="#analysis">Analysis and Discussion</a>
-            <div class="dropdown-content">
-                <a href="#results">Results</a>
-                <a href="#interpretation">Interpretation</a>
-            </div>
         </li>
         <li>
             <a href="#conclusion">Conclusion and Recommendation</a>
-            <div class="dropdown-content">
-                <a href="#conclusion-summary">Final Thoughts</a>
-                <a href="#recommendations">Recommendations</a>
-            </div>
         </li>
     </ul>
 </nav>
+
+<div class="content">
+    <h1 id="abstract">Abstract</h1>
+    <div class="card-group">
+        <div class="card">
+            <img src="thesis 1.jpg" alt="Thesis Image 1">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 1</h5>
+                <p class="card-text">A brief description of the first thesis. This is where you provide additional content.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 2.jpg" alt="Thesis Image 2">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 2</h5>
+                <p class="card-text">A brief description of the second thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 3.jpg" alt="Thesis Image 3">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 3</h5>
+                <p class="card-text">A brief description of the third thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 4.jpg" alt="Thesis Image 4">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 4</h5>
+                <p class="card-text">A brief description of the fourth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 5.jpg" alt="Thesis Image 5">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 5</h5>
+                <p class="card-text">A brief description of the fifth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="introduction">Introduction</h1>
+    <div class="card-group">
+        <div class="card">
+            <img src="thesis 6.jpg" alt="Thesis Image 6">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 6</h5>
+                <p class="card-text">A brief description of the sixth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 7.jpg" alt="Thesis Image 7">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 7</h5>
+                <p class="card-text">A brief description of the seventh thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 8.jpg" alt="Thesis Image 8">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 8</h5>
+                <p class="card-text">A brief description of the eighth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 9.jpg" alt="Thesis Image 9">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 9</h5>
+                <p class="card-text">A brief description of the ninth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="thesis 10.jpg" alt="Thesis Image 10">
+            <div class="card-body">
+                <h5 class="card-title">Thesis Title 10</h5>
+                <p class="card-text">A brief description of the tenth thesis.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+    
+    <h1 id="methodology">Methodology</h1>
+    <div class="card-group">
+        <!-- Add more cards for Methodology section as needed -->
+    </div>
+
+    <h1 id="analysis">Analysis and Discussion</h1>
+    <div class="card-group">
+        <!-- Add more cards for Analysis and Discussion section as needed -->
+    </div>
+
+    <h1 id="conclusion">Conclusion and Recommendation</h1>
+    <div class="card-group">
+        <!-- Add more cards for Conclusion and Recommendation section as needed -->
+    </div>
+</div>
 
 <script>
     const images = document.querySelectorAll('.bg-image');
